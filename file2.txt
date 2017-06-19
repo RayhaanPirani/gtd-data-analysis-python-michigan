@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <script type='text/javascript' src='https://www.gstatic.com/charts/loader.js'></script>
+    <script type='text/javascript'>
+     google.charts.load('upcoming', {'packages': ['geochart']});
+     google.charts.setOnLoadCallback(drawMarkersMap);
+
+      function drawMarkersMap() {
+      var data = google.visualization.arrayToDataTable([
+[Latitude, Longitude, Country, Region, Province, Date, Casualties],
+[18.456792, -69.951164, 'Dominican Republic', 'Central America & Caribbean', 'None', '1970-01-01', 1],
+[19.432608, -99.133207, 'Mexico', 'North America', 'None', '1970-01-01', 0],
+[15.478598, 120.599741, 'Philippines', 'Southeast Asia', 'Tarlac', '1970-01-01', 1],
+[37.983773, 23.728157, 'Greece', 'Western Europe', 'Attica', '1970-01-01', 0],
+[33.580412, 130.396361, 'Japan', 'East Asia', 'None', '1970-01-01', 0],
+[37.005105, -89.176269, 'United States', 'North America', 'Illinois', '1970-01-01', 0],
+[-34.891151, -56.187214, 'Uruguay', 'South America', 'Montevideo', '1970-01-02', 0],
+[37.805065, -122.273024, 'United States', 'North America', 'California', '1970-01-02', 0],
+[43.07295, -89.386694, 'United States', 'North America', 'Wisconsin', '1970-01-03', 0],
+[43.4685, -89.744299, 'United States', 'North America', 'Wisconsin', '1970-01-01', 0]        
+      ]);
+
+      var chart = new google.visualization.GeoChart(document.getElementById('chart_div'));
+      chart.draw(data, options);
+    };
+    </script>
+  </head>
+  <body>
+    <div id="chart_div" style="width: 900px; height: 500px;"></div>
+  </body>
+</html>
